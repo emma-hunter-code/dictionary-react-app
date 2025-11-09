@@ -1,9 +1,18 @@
 import "./App.css";
+import Dictionary from "./Dictionary";
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">Hello</header>
+      <div className="container">
+        <header className="App-header">Hello</header>
+        <main>
+          <Dictionary />
+        </main>
+        <footer className="text-center m-1">
+          <small>Coded by Emma Hunter and hosted on Netlify</small>
+        </footer>
+      </div>
     </div>
   );
 }
