@@ -5,11 +5,10 @@ body {
 }
 
 header {
-  text-align: left;
-  font-weight: light;
-  font-size: 80px;
-  letter-spacing: 5px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: right;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 1px;
   color: #e8554d;
 }
 
