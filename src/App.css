@@ -1,0 +1,18 @@
+body {
+  background: #dc9c8079;
+  margin: 30px auto;
+  max-width: 60%;
+}
+
+header {
+  text-align: left;
+  font-weight: light;
+  font-size: 80px;
+  letter-spacing: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #e8554d;
+}
+
+footer {
+  color: white;
+}

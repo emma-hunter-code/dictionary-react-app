@@ -1,10 +1,11 @@
 import React from "react";
+import "./Examples.css";
 
 export default function Examples(props) {
   if (props.example) {
     return (
       <span className="Examples">
-        <em>Example: {props.example}</em>
+        <p>"{props.example}"</p>
       </span>
     );
   }
