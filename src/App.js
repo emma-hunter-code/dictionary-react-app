@@ -10,7 +10,33 @@ export default function App() {
           <Dictionary defaultKeyword="hello" />
         </main>
         <footer className="text-center m-1">
-          <small>Coded by Emma Hunter and hosted on Netlify</small>
+          <small>
+            Coded by{" "}
+            <a
+              href="https://emmahunter.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Emma Hunter
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://github.com/emma-hunter-code/dictionary-react-app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open-source on github
+            </a>{" "}
+            and hosted on{" "}
+            <a
+              href="https://react-definitions.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Netlify
+            </a>
+            .
+          </small>
         </footer>
       </div>
     </div>
