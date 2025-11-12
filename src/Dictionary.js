@@ -3,15 +3,29 @@ import axios from "axios";
 import "./Dictionary.css";
 
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState([]);
+
+  function handleImages(response) {
+    setPhotos(response.data.photos);
+  }
 
   function handleResponse(response) {
-    console.log(response.data);
     setResults(response.data);
+    let pexelsApiKey =
+      "uEG19j9dPWZIlAkTyUI41zugdT8e0oEKcrJvMokRnLM8ypwep0a5I6YQ";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let headers = { Authorization: `${pexelsApiKey}` };
+    axios
+      .get(pexelsApiUrl, {
+        headers: headers,
+      })
+      .then(handleImages);
   }
 
   function search() {
@@ -50,6 +64,7 @@ export default function Dictionary(props) {
           <div className="hint">enter a word e.g. sunset, cat, tornado...</div>
         </section>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
